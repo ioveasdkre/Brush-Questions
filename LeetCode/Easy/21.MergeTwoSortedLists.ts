@@ -20,9 +20,11 @@ function mergeTwoLists(
   list1: ListNode | null,
   list2: ListNode | null
 ): ListNode | null {
-  if (!list1 || !list2) { // 判斷 list1 or list2為 null
-    return list1 ? list1 : list2; // 
-  } else if (list1.val < list2.val) { // a < b
+  if (!list1 || !list2) {
+    // 判斷 list1 or list2為 null
+    return list1 ? list1 : list2; //
+  } else if (list1.val < list2.val) {
+    // a < b
     list1.next = mergeTwoLists(list1.next, list2); // 下一個數字會是 a.next,b 做比較
     return list1;
   } else {

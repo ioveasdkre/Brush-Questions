@@ -10,28 +10,28 @@
     給定一個羅馬數字，將其轉換為整數。
 */
 function romanToInt(s: string): number {
-    const sList: string[] = s.split("");
-    let result: number = 0;
+  const sList: string[] = s.split("");
+  let result: number = 0;
 
-    // Object.entries 組成一個新的 Array陣列
-    for (var i = 0; i < sList.length; i++) {
-        const left = roman.get(sList[i]) ?? 0;
-        const right = roman.get(sList[i + 1]) ?? 0; // true ?? false
+  // Object.entries 組成一個新的 Array陣列
+  for (var i = 0; i < sList.length; i++) {
+    const left = roman.get(sList[i]) ?? 0;
+    const right = roman.get(sList[i + 1]) ?? 0; // true ?? false
 
-        left < right ? (result -= left) : (result += left);
-    }
+    left < right ? (result -= left) : (result += left);
+  }
 
-    return result;
+  return result;
 }
 
 const roman: Map<string, number> = new Map<string, number>([
-    ["I", 1],
-    ["V", 5],
-    ["X", 10],
-    ["L", 50],
-    ["C", 100],
-    ["D", 500],
-    ["M", 1000],
+  ["I", 1],
+  ["V", 5],
+  ["X", 10],
+  ["L", 50],
+  ["C", 100],
+  ["D", 500],
+  ["M", 1000],
 ]);
 
 console.log(romanToInt("III"));

@@ -14,15 +14,16 @@ class ListNode {
 
 function deleteDuplicates(head: ListNode | null): ListNode | null {
   if (!head) return null;
-    
+
   let node: ListNode | null = head;
 
-  while (node.next) { 
-      if (node.val === node.next.val) { // 判斷當前值和 下一個值是否相同
-        node.next = node.next.next // 將下下一階開始跑迴圈
-      } else { 
-        node = node.next // val與 next不同 所以 next當作下一次迴圈使用
-      }
+  while (node.next) {
+    if (node.val === node.next.val) {
+      // 判斷當前值和 下一個值是否相同
+      node.next = node.next.next; // 將下下一階開始跑迴圈
+    } else {
+      node = node.next; // val與 next不同 所以 next當作下一次迴圈使用
+    }
   }
-  return head 
+  return head;
 }

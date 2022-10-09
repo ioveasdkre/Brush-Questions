@@ -4,22 +4,22 @@
     例如，121是回文，而123不是。
  */
 function isPalindrome(x: number): boolean {
-    if (x < 0) return false;
+  if (x < 0) return false;
 
-    const xList: string[] = String(x).split("");
-    const yList: string[] = [];
+  const xList: string[] = String(x).split("");
+  const yList: string[] = [];
 
-    for (let i = xList.length; i >= 0; i--) {
-        yList.push(xList[i]);
-    }
+  for (let i = xList.length; i >= 0; i--) {
+    yList.push(xList[i]);
+  }
 
-    return xList.join("") === yList.join("");
+  return xList.join("") === yList.join("");
 }
 
 function isPalindrome2(x: number): boolean {
-    const left: string = x.toString(); // 轉字串
-    const right: string = left.split("").reverse().join(""); // 轉 Array, 反轉, 轉串接
-    return left === right;
+  const left: string = x.toString(); // 轉字串
+  const right: string = left.split("").reverse().join(""); // 轉 Array, 反轉, 轉串接
+  return left === right;
 }
 
 console.log(isPalindrome(121));
