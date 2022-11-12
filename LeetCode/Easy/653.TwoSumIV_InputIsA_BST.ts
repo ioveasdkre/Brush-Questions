@@ -15,7 +15,7 @@ class TreeNode {
 function findTarget(root: TreeNode | null, k: number): boolean {
   const set: Set<number> = new Set<number>();
   const queue: (TreeNode | null)[] = [root];
-
+  
   while (queue.length) {
     const curr = queue.shift(); // 刪除第一個元素，並回傳遞一個元素
     if (!curr)

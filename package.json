@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx ts-node ./LeetCode/Easy/69.Sqrt(x)"
+    "start": "npx ts-node ./LeetCode/Medium/433.MinimumGeneticMutation"
   },
   "author": "",
   "license": "ISC",
