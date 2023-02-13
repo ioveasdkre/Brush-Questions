@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx ts-node ./LeetCode/Medium/433.MinimumGeneticMutation"
+    "start": "npx ts-node ./LeetCode/Medium/1523.Count Odd Numbers in an Interval Range.ts"
   },
   "author": "",
   "license": "ISC",
